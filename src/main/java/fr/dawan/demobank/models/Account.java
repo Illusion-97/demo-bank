@@ -7,6 +7,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import static fr.dawan.demobank.tools.DateTimeHelper.getNowString;
@@ -19,7 +20,7 @@ import static fr.dawan.demobank.tools.DateTimeHelper.getNowString;
 public class Account implements Serializable {
     private double balance;
     private String code;
-    private List<String> history;
+    private List<String> history = new ArrayList<>();
 
     public double deposit(double amount) {
         balance += amount;

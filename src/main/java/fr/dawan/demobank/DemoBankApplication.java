@@ -1,5 +1,6 @@
 package fr.dawan.demobank;
 
+import fr.dawan.demobank.discord.BankListener;
 import fr.dawan.demobank.discord.GameMasterListener;
 import fr.dawan.demobank.discord.SpeakListener;
 import fr.dawan.demobank.models.Account;
@@ -32,6 +33,6 @@ public class DemoBankApplication {
 				.setChunkingFilter(ChunkingFilter.ALL)
 				.setBulkDeleteSplittingEnabled(false)
 				.setActivity(Activity.watching("le coffre de la banque"))
-				.addEventListeners(new GameMasterListener()).build();
+				.addEventListeners(new BankListener()).build();
 	}
 }
