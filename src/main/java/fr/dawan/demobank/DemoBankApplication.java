@@ -15,10 +15,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoBankApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoBankApplication.class, args);
-		String API_KEY = args[0];
-		JDABuilder.createDefault(API_KEY)
+		activateDiscordBot(args[0]);
+	}
+
+	private static void activateDiscordBot(String key) {
+		JDABuilder.createDefault(key)
 				.setMemberCachePolicy(MemberCachePolicy.ALL)
 				.enableIntents(GatewayIntent.GUILD_MEMBERS,
 						GatewayIntent.GUILD_MESSAGE_REACTIONS,

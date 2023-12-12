@@ -11,6 +11,19 @@ import java.util.List;
 @AllArgsConstructor
 public class AccountDto {
     private double balance;
-    private String code;
-    private List<String> history;
+    private String maskedCode;
+    private int historyCount;
+
+    public void setMaskedCode(String maskedCode) {
+        this.maskedCode = maskedCode == null ? "Code non généré" : "******";
+    }
+
+    @Override
+    public String toString() {
+        return "AccountDto{" +
+                "balance=" + balance +
+                ", maskedCode='" + maskedCode + '\'' +
+                ", historyCount=" + historyCount +
+                '}';
+    }
 }
