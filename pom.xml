@@ -15,6 +15,7 @@
 	<description>Demo project for Discord Bot</description>
 	<properties>
 		<java.version>17</java.version>
+		<projectName>Demo-Bank</projectName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -62,6 +63,7 @@
 
 
 	<build>
+		<finalName>${projectName}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
