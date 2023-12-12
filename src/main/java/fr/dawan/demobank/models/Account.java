@@ -29,6 +29,7 @@ public class Account implements Serializable {
     }
     public double withdraw(double amount) throws InsufficientFundsException {
         if (balance < amount) throw new InsufficientFundsException(balance,amount);
+        balance -= amount;
         addHistory("Withdraw",amount);
         return balance;
     }
