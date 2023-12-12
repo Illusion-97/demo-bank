@@ -22,7 +22,7 @@ public class DemoBankApplication {
 		activateDiscordBot(args[0]);
 	}
 
-	private static void activateDiscordBot(String key) {
+	public static void activateDiscordBot(String key) {
 		JDABuilder.createDefault(key)
 				.setMemberCachePolicy(MemberCachePolicy.ALL)
 				.enableIntents(GatewayIntent.GUILD_MEMBERS,
